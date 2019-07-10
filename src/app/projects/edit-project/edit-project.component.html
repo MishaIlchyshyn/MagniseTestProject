@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="top-panel">
+              <h1 class="title">Edit Project</h1>
+              <button type="button" class="btn btn-secondary" routerLink="/projects" title="Back to projects">Back</button>
+          </div>
+      </div>        
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="block-create">
+        <form action="">
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" id="name" placeholder="Enter name project" [(ngModel)]="project.name" name="projectName">
+          </label>
+
+          <label for="desc">
+            <span>Description</span>
+            <textarea name="description" id="desc" rows="5" [(ngModel)]="project.description" name="projectDescription"></textarea>
+          </label>
+
+          <label for="img">
+            <span>Image</span>
+            <input type="text" id="img" placeholder="Enter url img project" [(ngModel)]="project.image" name="projectImage">
+          </label>
+
+        </form>
+
+        <div class="btn-block">
+          <button type="button" class="btn btn-success btn-add" (click)="saveProject()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

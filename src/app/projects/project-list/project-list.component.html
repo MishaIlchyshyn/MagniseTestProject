@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="top-panel">
+                <h1 class="title" routerLink="/projects">All projects</h1>
+                <button type="button" class="btn btn-success" routerLink="create-project">New project</button>
+            </div>
+        </div>        
+    </div>
+  
+    <div class="row">
+        <div class="col-md-12">
+            <div class="list-all-project">
+                <div class="item-project"                 
+                *ngFor='let project of projects | paginate: { itemsPerPage: 3, currentPage: p }'>
+                    <img alt="icon project" class="icon-project" src="{{ project.image }}">
+                    <div class="info-project">
+                      <span 
+                          class="name-project" 
+                          title="Detail project" 
+                          routerLink="project-detail" 
+                          [queryParams]="{id: project.id}" >
+                          {{ project.name }}
+                      </span>
+                        <span class="description-project" 
+                        >{{ project.description }}</span>
+                    </div>
+                    <div class="button-block">
+                        <span class="issues" 
+                          title="Go to Issues on this project">
+                          !Issues ( <span class="count">{{project.issues.length}}</span> )
+                        </span>
+                        <button type="button" class="btn btn-warning"
+                         routerLink="edit-project"
+                         [queryParams]="{id: project.id}"
+                         >Edit</button>
+                        <button type="button" class="btn btn-danger" (click)="deleteProject(project.id)">Delete</button>
+                    </div>
+                </div>
+  
+                <div class="pagination">
+                  <pagination-controls class="my-pagination" (pageChange)="p = $event" maxSize="5" directionLinks="false"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  

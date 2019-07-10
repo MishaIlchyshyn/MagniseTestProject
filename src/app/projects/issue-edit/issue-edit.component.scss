@@ -1,0 +1,65 @@
+.top-panel {
+    padding: 20px 0 0 0;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 35px;
+}
+
+.btn-secondary {
+    margin-top: -15px;
+}
+
+button {
+    width: auto;
+}
+
+.block-create {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 50px 10px;
+    margin-top: 50px;
+}
+
+.block-create label {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+.block-create textarea {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.block-create span {
+    font-weight: 600;
+    display: block;
+    font-size: 16px;
+}
+
+.block-create input {
+    display: block;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.btn-block {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn-block .btn-add {
+    margin-right: 15px;
+}
+
+select {
+    margin-left: 64px;
+}

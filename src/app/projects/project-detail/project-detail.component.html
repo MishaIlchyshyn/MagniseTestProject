@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="top-panel">
+                <h1 class="title">Detailed information on the project</h1>
+                <button type="button" class="btn btn-secondary" routerLink="/projects" title="Back to projects">Back</button>
+            </div>
+        </div>        
+    </div>
+  
+    <div class="row">
+      <div class="col-md-8">
+        <div class="detail-block">
+  
+          <div class="block-title">
+            <img alt="icon project" class="icon-project" src="{{project.image}}">
+            <h2 class="name">{{project.name}}</h2>
+          </div>
+  
+          <p class="desription-detail">{{project.description}}</p>
+  
+            <div class="button-block">
+              <button type="button" class="btn btn-success" routerLink="create-issue">Create issue</button>
+              <button type="button" class="btn btn-warning" routerLink="edit-project">Edit</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <app-issue-list></app-issue-list>

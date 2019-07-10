@@ -1,0 +1,43 @@
+.title-issues {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.issues {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.item-issues {
+    border-bottom: 1px solid lightgray;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.count {
+    color: #afafaf;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.name-issues {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000000;
+}
+
+.name-issues:hover {
+    text-decoration: none;
+    color: #6b6b6b;
+}
+
+.desc-short-issues {
+    display: block;
+}
+
+.date-create {
+    color: #a5a5a4;
+    font-size: 12px;
+}

@@ -1,0 +1,62 @@
+.top-panel {
+    padding: 20px 0 0 0;
+}
+
+.title {
+    display: inline-block;
+    margin-right: 35px;
+}
+
+.btn-secondary {
+    margin-top: -15px;
+}
+
+button {
+    width: auto;
+}
+
+.issues {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.count {
+    color: #afafaf;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.detail-block {
+    cursor: pointer;
+}
+
+.block-title {
+    display: block;
+    height: 70px;
+    margin-top: 20px;
+}
+
+.icon-project {
+    max-width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 10px;
+    float: left;
+}
+
+.name {
+    line-height: 70px;
+}
+
+.desription-detail {
+    margin: 15px 0;
+}
+
+.button-block {
+    text-align: right;
+}
+
+.btn-warning, .btn-success {
+    margin-right: 10px;
+}

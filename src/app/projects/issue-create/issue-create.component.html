@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="top-panel">
+        <h1 class="title">Create New Issue</h1>
+        <button type="button" 
+          class="btn btn-secondary" 
+          routerLink="/projects/project-detail" 
+          title="Back to projects">
+          Back
+        </button>
+      </div>
+    </div>        
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="block-create">
+        <form action="">
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" id="name" placeholder="Enter name issue">
+          </label>
+
+          <label for="desc">
+            <span>Description</span>
+            <textarea name="description" id="desc" rows="5">Enter description issue</textarea>
+          </label>
+
+          <select name="status" id="status">
+            <option value="">status</option>
+            <option value="fixed">fixed</option>
+            <option value="upgrate">upgrate</option>
+          </select>
+
+        </form>
+
+        <div class="btn-block">
+          <button type="button" class="btn btn-success btn-add">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
