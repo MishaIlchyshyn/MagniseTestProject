@@ -28,9 +28,7 @@ export class FakeIssuesProvider extends FakeProvider<IIssue> {
         this._issuesStore[id] = [];
     }
 
-    getItems(projectId?: number): Observable<IIssue[]> {
-        console.log(projectId);
-        console.log(this._issuesStore);
+    getItems(projectId?: number): Observable<IIssue[]> {        
         if (Array.isArray(this._issuesStore[projectId])) {
             return this._wrapDataInObservable(this._issuesStore[projectId]);
         }

@@ -14,6 +14,7 @@ import { TranslateService as NGXTranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { LANG_LIST } from './translate/translate.service';
 import { CommunicationModule } from './communication/communication.module';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 export function metaFactory(translate: NGXTranslateService): MetaLoader {
     return new MetaStaticLoader({
@@ -54,6 +55,7 @@ export function initLanguage(translateService: TranslateService): Function {
         BrowserAnimationsModule,
         CommunicationModule,
         CookieModule.forRoot(),
+        NgxSpinnerModule
     ],
     declarations: [AppComponent],
     providers: [

@@ -3,7 +3,7 @@
       <div class="col-md-12">
           <div class="top-panel">
               <h1 class="title">Edit Issue</h1>
-              <button type="button" class="btn btn-secondary" routerLink="/projects/project-detail/issue-detail" title="Back to project">Back</button>
+              <button type="button" class="btn btn-secondary" (click)="goToProjectDetail()" title="Back to project">Back</button>
           </div>
       </div>        
   </div>
@@ -14,24 +14,23 @@
 
           <label for="name">
             <span>Name</span>
-            <input type="text" id="name" placeholder="Enter name issue">
+            <input type="text" id="name" placeholder="Enter name issue" name="name" [(ngModel)]="issue.name">
           </label>
 
           <label for="desc">
             <span>Description</span>
-            <textarea name="description" id="desc" rows="5">Enter description issue</textarea>
+            <textarea name="description" id="desc" rows="5" [(ngModel)]="issue.description"></textarea>
           </label>
 
-          <select name="status" id="status">
-            <option value="">status</option>
-            <option value="fixed">fixed</option>
-            <option value="upgrate">upgrate</option>
+          <select name="status" id="status" [(ngModel)]="issue.inProgress">
+            <option value="true">InProgress</option>
+            <option value="false">OnHold</option>
           </select>
 
         </form>
 
         <div class="btn-block">
-          <button type="button" class="btn btn-success btn-add">Save</button>
+          <button type="button" (click)="saveIssue()" class="btn btn-success btn-add">Save</button>
         </div>
       </div>
     </div>

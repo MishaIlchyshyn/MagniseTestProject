@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectModel } from '../project.model';
-import { DataprojectsService } from '../data-projects.service';
 import { IProject } from '../../communication/models/project';
-import { FakeProjectsProvider } from '../../communication/services/fake-projects-provider';
+import { ProjectsProvider } from '../../communication/services/projects-provider';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-project-list',
@@ -13,20 +12,31 @@ export class ProjectListComponent implements OnInit {
 
   public projects: IProject[];
 
-  constructor(private dataProjectsService: FakeProjectsProvider) { }
+  constructor(private dataProjectsService: ProjectsProvider, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
+    this.spinner.show();
     this.dataProjectsService.getItems().subscribe(projects => {
       this.projects = projects;
+      this.spinner.hide();
     });
   }
 
   deleteProject(id) {
-    this.dataProjectsService.deleteItem(id).subscribe(deleted => {
-      if (deleted) {
-        this.deleteItem(id);
-      }
-    });
+    let result = confirm("Ви дійсно бажаєте видалити цей проект?");
+    if(result === true) {
+      this.spinner.show();
+      this.dataProjectsService.deleteItem(id).subscribe(deleted => {
+        if (deleted) {
+          this.spinner.hide();
+          this.deleteItem(id);
+          alert("Проект успішно видалено!");
+        }
+      },
+      error => {
+        alert(error);
+      });
+    }    
   }
   
   deleteItem(id) {

@@ -2,12 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MetaGuard } from '@ngx-meta/core';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    {
-        path: '',
-        canActivateChild: [MetaGuard],
-        children: [{ path: 'home', loadChildren: './home/home.module#HomeModule' }],
-    },
+    { path: '', redirectTo: 'projects', pathMatch: 'full' },
     {
         path: 'projects',
         loadChildren: './projects/projects.module#ProjectsModule',

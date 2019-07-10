@@ -5,7 +5,7 @@
         <h1 class="title">Create New Issue</h1>
         <button type="button" 
           class="btn btn-secondary" 
-          routerLink="/projects/project-detail" 
+          (click)="goToProjectDetail()"
           title="Back to projects">
           Back
         </button>
@@ -20,24 +20,23 @@
 
           <label for="name">
             <span>Name</span>
-            <input type="text" id="name" placeholder="Enter name issue">
+            <input type="text" id="name" name="name" placeholder="Enter name issue" [(ngModel)]="issue.name">
           </label>
 
           <label for="desc">
             <span>Description</span>
-            <textarea name="description" id="desc" rows="5">Enter description issue</textarea>
+            <textarea name="description" id="desc" rows="5" [(ngModel)]="issue.description"></textarea>
           </label>
 
-          <select name="status" id="status">
-            <option value="">status</option>
-            <option value="fixed">fixed</option>
-            <option value="upgrate">upgrate</option>
+          <select name="status" id="status" [(ngModel)]="issue.inProgress">
+            <option value="true">inProgres</option>
+            <option value="false">onHold</option>
           </select>
 
         </form>
 
         <div class="btn-block">
-          <button type="button" class="btn btn-success btn-add">Add</button>
+          <button type="button" class="btn btn-success btn-add" (click)="addIssue()">Add</button>
         </div>
       </div>
     </div>

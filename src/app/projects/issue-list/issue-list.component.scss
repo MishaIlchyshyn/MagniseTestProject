@@ -13,6 +13,14 @@
     border-bottom: 1px solid lightgray;
     margin-top: 20px;
     padding-bottom: 10px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.select-status {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
 .count {
@@ -40,4 +48,8 @@
 .date-create {
     color: #a5a5a4;
     font-size: 12px;
+}
+
+.issu-status {
+    margin-left: 30px;
 }

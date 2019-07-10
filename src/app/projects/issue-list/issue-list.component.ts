@@ -1,20 +1,36 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FakeIssuesProvider } from '../../communication/services/fake-issues-provider';
-import { SharerService } from '../services/shared.services';
+import { IssuesProvider } from '../../communication/services/issues-provider';
+import { IIssue } from '../../communication/models/issue';
+import { ActivatedRoute } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-issue-list',
   templateUrl: './issue-list.component.html',
   styleUrls: ['./issue-list.component.scss']
 })
+
 export class IssueListComponent implements OnInit {
 
-  constructor(private fakeIssuesProvider: FakeIssuesProvider, private _sharer: SharerService) { }
+  issues: IIssue[] = [];
 
-  ngOnInit() {   
-    this._sharer.getProjectId.subscribe( id => {
-      this.fakeIssuesProvider.getItems(id).subscribe( data => console.log(data));
-    });
+  projectId: number;
+
+  constructor(private dataissuesProvider: IssuesProvider,
+              private route: ActivatedRoute,
+              private spinner: NgxSpinnerService) {
+                this.spinner.show();
+      this.route.queryParams.subscribe(params => {
+          this.projectId = params.id;
+          dataissuesProvider.getItems(params.id).subscribe(issues => {
+        this.issues = issues;
+        this.spinner.hide();
+      })
+    })
+}
+
+  ngOnInit() {
+    
   }
 
 }

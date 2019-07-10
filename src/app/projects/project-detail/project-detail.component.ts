@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DataprojectsService } from '../data-projects.service';
-import { ProjectModel } from '../project.model';
 import { ActivatedRoute } from '@angular/router';
-import { FakeProjectsProvider } from '../../communication/services/fake-projects-provider';
 import { IProject } from '../../communication/models/project';
-import { SharerService } from '../services/shared.services';
+import { ProjectsProvider } from '../../communication/services/projects-provider';
+import { Location } from '@angular/common';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-project-detail',
@@ -14,18 +13,43 @@ import { SharerService } from '../services/shared.services';
 export class ProjectDetailComponent implements OnInit {
 
   project: IProject = {id: null, name: null, description: null, image: null, issues: []};
+  isError = false;
 
-  constructor(private dataprojectsService : FakeProjectsProvider, private route: ActivatedRoute, private sharer: SharerService) { 
+  constructor(private dataprojectService: ProjectsProvider,
+              private route: ActivatedRoute,
+              private _location: Location,
+              private spinner: NgxSpinnerService) {
+              this.spinner.show();
     this.route.queryParams.subscribe(params => {
-      dataprojectsService.getItemById(params.id).subscribe(project => {
+      dataprojectService.getItemById(params.id).subscribe(project => {
         this.project = project;
-        sharer.setProjectId(params.id);      
-      });
-    });
+        this.spinner.hide();
+      },
+      error => {
+        this.isError = true;
+      })
+    })
   }
 
   ngOnInit() {
-       
+      
+  }
+
+  deleteProject() {
+    let result = confirm("Ви дійсно бажаєте видалити цей проект?");
+    if(result === true) {
+      this.spinner.show();
+      this.dataprojectService.deleteItem(this.project.id).subscribe(deleted => {
+        if (deleted) {
+          this.spinner.hide();
+          alert("Проект успішно видалено!");
+          this._location.back();
+        }
+      },
+      error => {
+        alert(error);
+      });
+    }    
   }
 
 }

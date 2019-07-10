@@ -6,35 +6,17 @@
 
         <span class="issues" 
           title="Go to Issues on this project">
-          !Issues ( <span class="count">10</span> )
+          !Issues ( <span class="count">{{issues.length}}</span> )
         </span>
 
-        <div class="item-issues">
-          <span class="id">#1. </span>
-          <h5 class="name-issues" routerLink='issue-detail'>Name issue</h5>
-          <span class="desc-short-issues">description (short)</span> <br>
-          <span class="date-create">create date 07.07.2019</span>
-        </div>
-
-        <div class="item-issues">
-          <span class="id">#2. </span>
-          <h5 class="name-issues" routerLink='/projects/detail/issue'>Name issue</h5>
-          <span class="desc-short-issues">description (short)</span> <br>
-          <span class="date-create">create date 07.07.2019</span>
-        </div>
-
-        <div class="item-issues">
-          <span class="id">#3. </span>
-          <h5 class="name-issues" routerLink='/projects/detail/issue'>Name issue</h5>
-          <span class="desc-short-issues">description (short)</span> <br>
-          <span class="date-create">create date 07.07.2019</span>
-        </div>
-
-        <div class="item-issues">
-          <span class="id">#4. </span>
-          <h5 class="name-issues" routerLink='/projects/detail/issue'>Name issue</h5>
-          <span class="desc-short-issues">description (short)</span> <br>
-          <span class="date-create">create date 07.07.2019</span>
+        <div class="item-issues" *ngFor="let issue of issues">
+          <h5 class="name-issues" 
+            routerLink='issue-detail'
+            [queryParams]="{id: issue.id, projectId: projectId}">{{ issue.name }}</h5>
+          <span class="desc-short-issues">{{ issue.description }}</span> <br>
+          <span class="date-create">{{ issue.created | date: 'short' }}</span>
+          
+          <span class="issu-status">Status: {{issue.inProgress ? 'InProgress' : 'OnHold'}}</span>
         </div>
       </div>
     </div>

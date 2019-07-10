@@ -14,7 +14,7 @@ import { IssueListComponent } from './issue-list/issue-list.component';
 import { IssueCreateComponent } from './issue-create/issue-create.component';
 import { IssueDetailComponent } from './issue-detail/issue-detail.component';
 import { IssueEditComponent } from './issue-edit/issue-edit.component';
-import { SharerService } from './services/shared.services';
+
 
 @NgModule({
   declarations: [
@@ -31,11 +31,10 @@ import { SharerService } from './services/shared.services';
     CommonModule,
     ProjectsRoutingModule,
     NgxPaginationModule,
-    FormsModule
+    FormsModule  
   ],
   providers: [
     DataprojectsService,
-    SharerService
   ],
 })
 export class ProjectsModule { }

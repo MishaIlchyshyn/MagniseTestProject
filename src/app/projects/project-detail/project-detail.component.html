@@ -1,4 +1,5 @@
-<div class="container">
+<div class=project-detail-content *ngIf="!isError">
+  <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="top-panel">
@@ -20,9 +21,9 @@
           <p class="desription-detail">{{project.description}}</p>
   
             <div class="button-block">
-              <button type="button" class="btn btn-success" routerLink="create-issue">Create issue</button>
-              <button type="button" class="btn btn-warning" routerLink="edit-project">Edit</button>
-              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="button" class="btn btn-success" routerLink="create-issue" [queryParams]="{projectId: project.id}">Create issue</button>
+              <button type="button" class="btn btn-warning" routerLink="edit-project"  [queryParams]="{id: project.id}">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="deleteProject()">Delete</button>
             </div>
         </div>
   
@@ -30,4 +31,9 @@
     </div>
   </div>
   
-  <app-issue-list></app-issue-list>
+  <app-issue-list></app-issue-list>  
+</div>
+<div *ngIf="isError">
+  Проект незнайдено
+  <button type="button" class="btn btn-secondary" routerLink="/projects" title="Back to projects">Back</button>
+</div>

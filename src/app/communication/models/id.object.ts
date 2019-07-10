@@ -1,3 +1,3 @@
 export interface IIdObject {
-    id: number;
+    id?: number;
 }
