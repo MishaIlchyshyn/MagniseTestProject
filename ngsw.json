@@ -1,0 +1,84 @@
+{
+  "configVersion": 1,
+  "timestamp": 1562798850771,
+  "index": "https://MishaIlchyshyn.github.io/MagniseTestProject.git/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/5.3693c440bfbf2bc9d105.js",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/6.10ea572b6cdccdbf8070.js",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/favicon.ico",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/index.html",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/main.a3bca80a1fcb8c40bfd6.js",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/polyfills-es5.613d1909ec381c0aefb7.js",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/polyfills.52c4aaa67a9b6fe0e2ba.js",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/runtime.8544ed5b881ba0a7bfd8.js",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/styles.e239ab4bdcfc85150e43.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/i18n/en.json",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/i18n/ua.json",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icon/angular.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-128x128.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-144x144.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-152x152.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-192x192.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-384x384.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-512x512.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-72x72.png",
+        "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/5.3693c440bfbf2bc9d105.js": "13d78d7b58deb71b9690fd47b08ae519e5d6ced2",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/6.10ea572b6cdccdbf8070.js": "1abf695bc4e7d195298d9f5e4176a6b558f73ccf",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/i18n/en.json": "1f8a3f18f3a6f068703fb0767e514b29f01749a4",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/i18n/ua.json": "60e220ec91057f4fb752211d822c82738b27f515",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icon/angular.png": "9a88437923f74515d02f683690a605512199df85",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/index.html": "6c6f7a0e4bd4fa18910f8a9dac25ac85630e6f42",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/main.a3bca80a1fcb8c40bfd6.js": "9b22f460f2dc28a1b04c1f32f4449d8927b78cec",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/polyfills-es5.613d1909ec381c0aefb7.js": "e3aac0d6ebd3f9f1286da2a0bbb8631c4642986c",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/polyfills.52c4aaa67a9b6fe0e2ba.js": "8bd17f6c2b331528a4099395a684b0912f120f97",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/runtime.8544ed5b881ba0a7bfd8.js": "6492a734d12cfb60c075e9572fb9d100238f5b40",
+    "https://MishaIlchyshyn.github.io/MagniseTestProject.git/styles.e239ab4bdcfc85150e43.css": "6391788f3c829fb22f74640b9c66ae05bf71eda6"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
